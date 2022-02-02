@@ -1,0 +1,75 @@
+body {
+  font-family: "PT Serif Caption", serif;
+  color: #1f4068;
+}
+h1 {
+  text-align: center;
+
+  padding: 20px;
+  font-size: 45px;
+}
+
+.btn {
+  color: white;
+  background-color: #3282b8;
+  border: #3282b8;
+}
+.btn:hover {
+  color: white;
+  background-color: #0f4c75;
+  border: #0f4c75;
+}
+.sunny-current {
+  font-size: 100px;
+  color: #ffd07f;
+  margin: 0 0 20px;
+}
+ul {
+  text-align: right;
+  list-style: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 70px;
+}
+.current-temp {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+
+.cloud {
+  text-align: center;
+  font-size: 75px;
+  color: #27496d;
+}
+.card-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 15px;
+  text-align: center;
+}
+
+.cloud-rain {
+  font-size: 50px;
+  color: #bbe1fa;
+}
+
+.cloud-sun-rain {
+  font-size: 50px;
+}
+
+.sunny {
+  font-size: 50px;
+  color: #ffd07f;
+}
+
+.temperature {
+  font-size: 20px;
+  padding-top: 25px;
+}
