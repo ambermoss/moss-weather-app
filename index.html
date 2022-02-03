@@ -41,9 +41,11 @@
     </form>
 
     <div class="row">
-      <div class="col-3">
+      <div class="col-5">
         <h2 id="place"></h2>
-        <span class="current-temp" id="current-temp"></span><span class="units">°F</span>
+        <div class="today-details-header">
+          <span class="current-temp" id="current-temp"></span><span class="units">°F</span>
+        </div>
       </div>
       <div class="col-6">
         <ul>
@@ -58,7 +60,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="future-forecast">
       <div class="col-3">
         <i class="col fas fa-cloud-rain cloud-rain"></i>
         <p class="temperature">41°</p>
