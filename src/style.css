@@ -28,7 +28,7 @@ ul {
   text-align: right;
   list-style: none;
 }
-.today-details-header{
+.today-details-header {
   text-align: center;
   padding: 50px auto;
 }
@@ -36,7 +36,6 @@ h2 {
   text-align: center;
   font-size: 40px;
   padding-top: 50px;
-  
 }
 .current-temp {
   text-align: center;
@@ -46,7 +45,15 @@ h2 {
   position: relative;
 }
 
+.ExtendedWeatherForecast {
+  text-align: center;
+  margin: 40px 0;
+  padding-bottom: 50px;
+}
 
+.row {
+  display: flex;
+}
 
 .cloud {
   text-align: center;
