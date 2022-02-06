@@ -9,6 +9,14 @@ h1 {
   font-size: 45px;
 }
 
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-app {
+  padding: 20px;
+}
+
 .btn {
   color: white;
   background-color: #3282b8;

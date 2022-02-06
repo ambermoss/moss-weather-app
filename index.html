@@ -27,84 +27,94 @@
   </head>
 
   <body>
-    <h1>Weather</h1>
     <div class="container">
-      <form id="searchCity-form">
-        <div class="row">
-          <div class="col-5">
-            <div class="mb-3">
-              <input
-                type="search"
-                placeholder="Enter the city name"
-                class="form-control"
-                id="city-input"
-                aria-describedby="emailHelp"
-                autofocus
-              />
+      <div class="my-weather-app">
+        <div class="my-weather-app-wrapper"></div>
+        <h1>Weather</h1>
+        <div class="container">
+          <form id="searchCity-form">
+            <div class="row">
+              <div class="col-5">
+                <div class="mb-3">
+                  <input
+                    type="search"
+                    placeholder="Enter the city name"
+                    class="form-control"
+                    id="city-input"
+                    aria-describedby="emailHelp"
+                    autofocus
+                  />
+                </div>
+              </div>
+              <div class="col-3">
+                <button type="submit" class="btn btn-primary w-100">
+                  Search
+                </button>
+              </div>
+              <div class="col-3">
+                <button
+                  class="btn btn-success w-100"
+                  id="current-location-button"
+                >
+                  Current City
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col-5">
+              <h2 id="place"></h2>
+              <div class="today-details-header">
+                <span class="current-temp" id="current-temp"></span
+                ><span class="units">°F</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <i class="col fas fa-sun sunny-current"></i>
+
+                <li id="date"></li>
+
+                <li>Humidity: <span id="humidity"></span></li>
+                <li>Wind: <span id="wind"></span></li>
+                <li id="description"></li>
+              </ul>
             </div>
           </div>
-          <div class="col-3">
-            <button type="submit" class="btn btn-primary w-100">Search</button>
+
+          <div class="ExtendedWeatherForecast row">
+            <h3 id="future-forecast">Future Forecast</h3>
+            <div class="col-3 DailyForecast">
+              <p class="week-day">Tues</p>
+              <i class="col fas fa-cloud-rain cloud-rain"></i>
+              <p class="temperature">41°</p>
+            </div>
+            <div class="col-3 DailyForecast">
+              <p class="week-day">Wed</p>
+              <i class="col fas fa-cloud-sun-rain cloud-sun-rain"></i>
+              <p class="temperature">55°</p>
+            </div>
+            <div class="col-3 DailyForecast">
+              <p class="week-day">Thurs</p>
+              <i class="col fas fa-sun sunny"></i>
+              <p class="temperature">58°</p>
+            </div>
+            <div class="col-3 DailyForecast">
+              <p class="week-day">Fri</p>
+              <i class="col fas fa-sun sunny"></i>
+              <p class="temperature">60°</p>
+            </div>
           </div>
-          <div class="col-3">
-            <button class="btn btn-success w-100" id="current-location-button">
-              Current City
-            </button>
-          </div>
         </div>
-      </form>
-
-      <div class="row">
-        <div class="col-5">
-          <h2 id="place"></h2>
-          <div class="today-details-header">
-            <span class="current-temp" id="current-temp"></span
-            ><span class="units">°F</span>
-          </div>
-        </div>
-        <div class="col-6">
-          <ul>
-            <i class="col fas fa-sun sunny-current"></i>
-
-            <li id="date"></li>
-
-            <li>Humidity: <span id="humidity"></span></li>
-            <li>Wind: <span id="wind"></span></li>
-            <li id="description"></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="ExtendedWeatherForecast row">
-        <h3 id="future-forecast">Future Forecast</h3>
-        <div class="col-3 DailyForecast">
-          <p class="week-day">Tues</p>
-          <i class="col fas fa-cloud-rain cloud-rain"></i>
-          <p class="temperature">41°</p>
-        </div>
-        <div class="col-3 DailyForecast">
-          <p class="week-day">Wed</p>
-          <i class="col fas fa-cloud-sun-rain cloud-sun-rain"></i>
-          <p class="temperature">55°</p>
-        </div>
-        <div class="col-3 DailyForecast">
-          <p class="week-day">Thurs</p>
-          <i class="col fas fa-sun sunny"></i>
-          <p class="temperature">58°</p>
-        </div>
-        <div class="col-3 DailyForecast">
-          <p class="week-day">Fri</p>
-          <i class="col fas fa-sun sunny"></i>
-          <p class="temperature">60°</p>
-        </div>
+        <p>
+          <a href="https://github.com/ambermoss/moss-weather-app"
+            >open-source code</a
+          >
+          by Amber Moss
+        </p>
       </div>
     </div>
-    <p>
-      <a href="https://github.com/ambermoss/moss-weather-app"
-        >open-source code</a
-      >
-      by Amber Moss
-    </p>
     <script src="src/index.js"></script>
   </body>
 </html>
