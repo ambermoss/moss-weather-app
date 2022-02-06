@@ -1,12 +1,17 @@
 function displayWeatherCondition(response) {
+  console.log(response.data);
   document.querySelector("#place").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
@@ -35,17 +40,15 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
   let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  let dayIndex = date.getDay();
+  let ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes.toString().padStart(2, "0");
+  let strTime = hours + ":" + minutes + " " + ampm;
 
   let days = [
     "Sunday",
@@ -56,9 +59,8 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let day = days[dayIndex];
-
-  return `${day} ${hours}:${minutes}`;
+  let day = days[date.getDay()];
+  return `${day} ${strTime}`;
 }
 
 let currentDay = document.querySelector("#date");
