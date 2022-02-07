@@ -56,6 +56,7 @@ h2 {
 .units {
   position: relative;
   top: -17px;
+  font-size: 15px;
 }
 
 h3 {
@@ -80,12 +81,14 @@ h3 {
 .row {
   display: flex;
 }
-
-.cloud {
-  text-align: center;
-  font-size: 75px;
-  color: #27496d;
+.temperature {
+  font-size: 28px;
+  padding-top: 25px;
 }
+.lowTemperature {
+  font-size: 15px;
+}
+
 .card-title {
   font-size: 24px;
   text-align: center;
@@ -94,23 +97,4 @@ h3 {
 .card-text {
   font-size: 15px;
   text-align: center;
-}
-
-.cloud-rain {
-  font-size: 50px;
-  color: #bbe1fa;
-}
-
-.cloud-sun-rain {
-  font-size: 50px;
-}
-
-.sunny {
-  font-size: 50px;
-  color: #ffd07f;
-}
-
-.temperature {
-  font-size: 20px;
-  padding-top: 25px;
 }
