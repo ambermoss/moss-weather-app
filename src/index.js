@@ -68,6 +68,74 @@ function formatDate(timestamp) {
   return `${day} ${strTime}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    ` <div class="col-3 DailyForecast">
+                <p class="week-day">Tues</p>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt="weather condition"
+                  id="icon"
+                />
+                <p class="hightemperature">
+                  41
+                  <small class="lowTemperature"> 30</small>
+                </p>
+              </div>`;
+  forecastHTML =
+    forecastHTML +
+    ` <div class="col-3 DailyForecast">
+                <p class="week-day">Tues</p>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt="weather condition"
+                  id="icon"
+                />
+                <p class="hightemperature">
+                  41
+                  <small class="lowTemperature"> 30</small>
+                </p>
+              </div>`;
+  forecastHTML =
+    forecastHTML +
+    ` <div class="col-3 DailyForecast">
+                <p class="week-day">Tues</p>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt="weather condition"
+                  id="icon"
+                />
+                <p class="hightemperature">
+                  41
+                  <small class="lowTemperature"> 30</small>
+                </p>
+              </div>`;
+  forecastHTML =
+    forecastHTML +
+    ` <div class="col-3 DailyForecast">
+                <p class="week-day">Tues</p>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt="weather condition"
+                  id="icon"
+                />
+                <p class="hightemperature">
+                  41
+                  <small class="lowTemperature"> 30</small>
+                </p>
+              </div>`;
+  forecastHTML = forecastHTML + "</div>";
+  forecastHTML = forecastHTML + "</div>";
+  forecastHTML = forecastHTML + "</div>";
+  forecastHTML = forecastHTML + "</div>";
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let currentDay = document.querySelector("#date");
 let currentTime = new Date();
 currentDay.innerHTML = formatDate(currentTime);
@@ -82,3 +150,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
+displayForecast();
