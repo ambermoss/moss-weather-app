@@ -81,12 +81,13 @@ h3 {
 .row {
   display: flex;
 }
-.temperature {
+.hightemperature {
   font-size: 28px;
   padding-top: 25px;
 }
 .lowTemperature {
   font-size: 15px;
+  opacity: 0.6;
 }
 
 .card-title {
