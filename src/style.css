@@ -82,11 +82,11 @@ h3 {
   display: flex;
 }
 .hightemperature {
-  font-size: 28px;
+  font-size: 22px;
   padding-top: 25px;
 }
 .lowTemperature {
-  font-size: 15px;
+  font-size: 13px;
   opacity: 0.6;
 }
 
