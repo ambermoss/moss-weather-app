@@ -69,6 +69,15 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function retrievePosition(position) {
+  let longitude = position.coords.longitude;
+  let latitude = position.coords.latitude;
+  let units = "imperial";
+  let apiKey = "30d8dcf8c5a32b629f0453f6b9714950";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#place").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
