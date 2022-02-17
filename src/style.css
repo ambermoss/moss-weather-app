@@ -27,15 +27,16 @@ h1 {
   background-color: #0f4c75;
   border: #0f4c75;
 }
-.sunny-current {
-  font-size: 100px;
-  color: #ffd07f;
-  margin: 0 0 20px;
-}
+
 ul {
   text-align: right;
   list-style: none;
 }
+
+.date {
+  padding-top: 45px;
+}
+
 .today-details-header {
   text-align: center;
   padding: 50px auto;

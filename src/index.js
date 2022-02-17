@@ -50,7 +50,7 @@ function displayForecast(response) {
                 />
                 <p class="hightemperature">
                   ${Math.round(forecastDay.temp.max)}°
-                  <div class="lowTemperature"> ${Math.round(
+                  <div class="lowTemperature">L: ${Math.round(
                     forecastDay.temp.min
                   )}°</div>
                 </p>
@@ -72,19 +72,23 @@ function getForecast(coordinates) {
 }
 
 function displayWeatherCondition(response) {
-  document.querySelector("#place").innerHTML = response.data.name;
-  document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  console.log(response.data.main);
   let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#icon");
+  let cityElement = document.querySelector("#place");
+  let temperatureElement = document.querySelector("#current-temp");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let descriptionElement = document.querySelector("#description");
+  let minTemperature = document.querySelector("#minTemperature");
+
+  minTemperature.innerHTML = Math.round(response.data.main.temp_min);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  descriptionElement.innerHTML = response.data.weather[0].main;
+  cityElement.innerHTML = response.data.name;
   iconElement.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
